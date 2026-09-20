@@ -159,7 +159,7 @@ graves.classList.remove('show');
 boom.classList.remove('active');
 flash.classList.remove('active');
 song.pause();
-try{song.currentTime=2;}catch(e){}
+try{song.currentTime=0;}catch(e){}
 }
 
 playHotspot.addEventListener('click',async e=>{
@@ -168,7 +168,7 @@ if(playHotspot.disabled)return;
 playHotspot.disabled=true;
 nextBtn.classList.remove('show');
 
-try{song.currentTime=2;}catch(e){}
+try{song.currentTime=0;}catch(e){}
 try{await song.play();}catch(e){console.warn('Audio playback was blocked:',e);}
 
 bus.style.transition='transform 4s cubic-bezier(.15,.8,.15,1)';
